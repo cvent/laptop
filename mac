@@ -129,6 +129,11 @@ fancy_echo "Installing Homebrew Cask to allow installing of apps"
 fancy_echo "Installing Virtual box "
   brew_cask_install 'virtualbox'
 
+fancy_echo "Installing slack "
+  brew_cask_install 'slack'
+
+source ~/.bashrc
+
 fancy_echo "Installing your personal additions from ~/.laptop.local ..."
   if [[ -f ~/.laptop.local ]]; then
     source ~/.laptop.local
