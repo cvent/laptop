@@ -111,7 +111,7 @@ brew update
 fancy_echo "Installing vim from Homebrew to get the latest version ..."
   brew_install_or_upgrade 'vim'
 
-fancy_echo "Installing vim from Homebrew to get the latest version ..."
+fancy_echo "Installing git from Homebrew to get the latest version ..."
   brew_install_or_upgrade 'git'
 
 node_version="0.11"

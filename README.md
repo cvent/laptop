@@ -1,7 +1,7 @@
 Laptop
 ======
 
-Laptop is a script to set up an OS X laptop for Rails development.
+Laptop is a script to set up an OS X laptop for development.
 
 Requirements
 ------------
@@ -34,6 +34,11 @@ What it sets up
 ---------------
 
 * [Homebrew] for managing operating system libraries
+* [Git] for version control
+* [vim] for a lightweight text editor from the console
+* [Homebrew Cask] to install mac applications from the command line
+* [Virtualbox] to interface with vagrant and docker virtual instances
+* [Slack] for team chat
 
 [Homebrew]: http://brew.sh/
 
