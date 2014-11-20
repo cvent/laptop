@@ -80,6 +80,12 @@ brew_is_upgradable() {
   [[ $? -ne 0 ]]
 }
 
+brew_tap_if_untapped() {
+  if ! brew tap | grep -Fqx "$1"; then
+    brew tap $1
+  fi
+}
+
 brew_cask_expand_alias() {
   brew cask info "$1" 2>/dev/null | head -1 | awk '{gsub(/:/, ""); print $1}'
 }
@@ -123,7 +129,8 @@ node_version="0.11"
   #nvm alias default "$node_version"
 
 fancy_echo "Installing Homebrew Cask to allow installing of apps"
-  brew_install_or_upgrade 'caskroom/cask/brew-cask'
+  brew_tap_if_untapped 'caskroom/cask'
+  brew_install_or_upgrade 'brew-cask'
   brew cask update
 
 fancy_echo "Installing Virtual box "
