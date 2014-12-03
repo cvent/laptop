@@ -116,17 +116,17 @@ fancy_echo "Installing git from Homebrew to get the latest version ..."
 
 node_version="0.11"
 
-#fancy_echo "Installing NVM, Node.js, and NPM, for running apps and installing JavaScript packages ..."
-  #brew_install_or_upgrade 'nvm'
+fancy_echo "Installing NVM, Node.js, and NPM, for running apps and installing JavaScript packages ..."
+  brew_install_or_upgrade 'nvm'
 
-  #append_to_shellrc 'export PATH="$PATH:/usr/local/lib/node_modules"'
-  #append_to_shellrc 'source $(brew --prefix nvm)/nvm.sh' 1
+  append_to_shellrc 'export PATH="$PATH:/usr/local/lib/node_modules"'
+  append_to_shellrc 'source $(brew --prefix nvm)/nvm.sh' 1
 
-  #source $(brew --prefix nvm)/nvm.sh
-  #nvm install "$node_version"
+  source $(brew --prefix nvm)/nvm.sh
+  nvm install "$node_version"
 
-  #fancy_echo "Setting $node_version as the global default nodejs..."
-  #nvm alias default "$node_version"
+  fancy_echo "Setting $node_version as the global default nodejs..."
+  nvm alias default "$node_version"
 
 fancy_echo "Installing Homebrew Cask to allow installing of apps"
   brew_tap_if_untapped 'caskroom/cask'
