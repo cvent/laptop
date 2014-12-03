@@ -26,8 +26,7 @@ Debugging
 
 Your last Laptop run will be saved to `~/laptop.log`. Read through it to see if
 you can debug the issue yourself. If not, copy the lines where the script
-failed into a [new GitHub
-Issue](https://github.com/thoughtbot/laptop/issues/new) for us. Or, attach the
+failed into a [new GitHub Issue](https://github.com/bigbam505/laptop/issues/new) for us. Or, attach the
 whole log file as an attachment.
 
 What it sets up
@@ -38,6 +37,7 @@ What it sets up
 * [vim] for a lightweight text editor from the console
 * [Homebrew Cask] to install mac applications from the command line
 * [Virtualbox] to interface with vagrant and docker virtual instances
+* [Nvm] for node version managing
 * [Slack] for team chat
 
 [Homebrew]: http://brew.sh/
