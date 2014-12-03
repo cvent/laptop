@@ -19,14 +19,14 @@ Install
 
 Read, then run the script:
 
-    bash <(curl -s https://raw.githubusercontent.com/bigbam505/laptop/master/mac) 2>&1 | tee ~/laptop.log
+    bash <(curl -s https://raw.githubusercontent.com/cvent/laptop/master/mac) 2>&1 | tee ~/laptop.log
 
 Debugging
 ---------
 
 Your last Laptop run will be saved to `~/laptop.log`. Read through it to see if
 you can debug the issue yourself. If not, copy the lines where the script
-failed into a [new GitHub Issue](https://github.com/bigbam505/laptop/issues/new) for us. Or, attach the
+failed into a [new GitHub Issue](https://github.com/cvent/laptop/issues/new) for us. Or, attach the
 whole log file as an attachment.
 
 What it sets up
