@@ -145,6 +145,9 @@ fancy_echo "Installing docker from Homebrew to get the latest version ..."
 fancy_echo "Installing boot2docker from Homebrew to get the latest version ..."
   brew_install_or_upgrade 'boot2docker'
 
+fancy_echo "Installing fig from Homebrew to get the latest version ..."
+  brew_install_or_upgrade 'fig'
+
 source ~/.bashrc
 
 fancy_echo "Installing your personal additions from ~/.laptop.local ..."

@@ -39,6 +39,9 @@ What it sets up
 * [Virtualbox] to interface with vagrant and docker virtual instances
 * [Nvm] for node version managing
 * [Slack] for team chat
+* [Docker] For container launching
+* [fig] To coordinate docker containers
+* [boot2docker] To allow docker support on mac
 
 [Homebrew]: http://brew.sh/
 
