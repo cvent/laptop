@@ -48,8 +48,7 @@ What it sets up
 It should take less than 15 minutes to install (depends on your machine).
 
 Laptop can be run multiple times on the same machine safely. It will upgrade
-already installed packages and install and activate a new version of ruby (if
-one is available).
+already installed packages and install
 
 Make your own customizations
 ----------------------------
