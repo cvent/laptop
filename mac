@@ -139,6 +139,12 @@ fancy_echo "Installing Virtual box "
 fancy_echo "Installing slack "
   brew_cask_install 'slack'
 
+fancy_echo "Installing docker from Homebrew to get the latest version ..."
+  brew_install_or_upgrade 'docker'
+
+fancy_echo "Installing boot2docker from Homebrew to get the latest version ..."
+  brew_install_or_upgrade 'boot2docker'
+
 source ~/.bashrc
 
 fancy_echo "Installing your personal additions from ~/.laptop.local ..."
