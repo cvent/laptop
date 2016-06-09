@@ -4,21 +4,29 @@
 # Be prepared to turn your laptop (or desktop, no haters here)
 # into an awesome development machine.
 
+
+# This is an adaptation that uses the .bashrc file by default but if zsh is enabled it
+# will add things to the .zshrc file
+
+shellrc="$HOME/.bashrc"
+if [[ "$SHELL" = "/bin/zsh" ]]; then
+  echo "Using .zshrc instead of .bashrc"
+  shellrc="$HOME/.zshrc"
+fi
+
 fancy_echo() {
   printf "\n%b\n" "$1"
 }
 
 append_to_shellrc() {
-  local text="$1" bashrc
+  local text="$1"
   local skip_new_line="$2"
 
-  bashrc="$HOME/.bashrc"
-
-  if ! grep -Fqs "$text" "$bashrc"; then
+  if ! grep -Fqs "$text" "$shellrc"; then
     if (( skip_new_line )); then
-      printf "%s\n" "$text" >> "$bashrc"
+      printf "%s\n" "$text" >> "$shellrc"
     else
-      printf "\n%s\n" "$text" >> "$bashrc"
+      printf "\n%s\n" "$text" >> "$shellrc"
     fi
   fi
 }
@@ -31,8 +39,8 @@ if [[ ! -d "$HOME/.bin/" ]]; then
   mkdir "$HOME/.bin"
 fi
 
-if [[ ! -f "$HOME/.bashrc" ]]; then
-  touch "$HOME/.bashrc"
+if [[ ! -f "$shellrc" ]]; then
+  touch "$shellrc"
 fi
 
 append_to_shellrc 'export PATH="$HOME/.bin:$PATH"'
